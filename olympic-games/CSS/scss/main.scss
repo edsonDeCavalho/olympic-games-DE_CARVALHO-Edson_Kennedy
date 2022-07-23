@@ -1,0 +1,21 @@
+@import "abstracts/_variables.scss";
+@import "layout/header";
+@import "layout/_grid.scss";
+@import "components/_sections.scss";
+@import "components/_astronauts.scss";
+@import "components/_images.scss";
+@import "base/typography.scss";
+@import "vendors/bootstrap/node_modules/bootstrap/scss/bootstrap.scss";
+html {
+    background-color: aquamarine;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.centarisation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

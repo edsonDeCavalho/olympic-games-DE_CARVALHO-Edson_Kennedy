@@ -1,0 +1,50 @@
+    .astronauts_center {
+        grid-column: 1/6;
+        grid-row: 2/4;
+    }
+    
+    .upAndDownMeditate {
+        animation-name: upAndDownMeditate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transform: rotate(360deg);
+        @keyframes upAndDownMeditate {
+            0% {
+                transform: translateY(0);
+            }
+            35% {
+                transform: translateY(0);
+            }
+            70% {
+                transform: translateY(-15px);
+            }
+            85% {
+                transform: translateY(65px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+    
+    .artronautAside {
+        position: fixed;
+        float: right;
+        margin-left: 3%;
+        margin-top: 2%;
+        .rotate {
+            animation-name: rotation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            @keyframes rotation {
+                100% {
+                    transform: rotateZ(360deg);
+                }
+            }
+        }
+        &:hover .rotate {
+            transform: translateY(300px) translateY(300px);
+        }
+    }

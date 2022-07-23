@@ -1,0 +1,33 @@
+$color-socials:( Mygrey:#A3B4C8, MyorangeCLaire:#CC6D3D, Myorange:#B74803, Myblue:#022E51, whitie:white, Special_Green:aquamarine);
+@each $key,
+$value in $color-socials {
+    .color-#{$key} {
+        color: $value;
+    }
+    .background-section-#{$key} {
+        background-color: $value;
+    }
+    .background-text-#{$key} {
+        color: $value;
+    }
+}
+
+@for $i from 1 through 50 {
+    .full-size-background-#{$i} {
+        background-image: url("https://picsum.photos/id/"+random(100)+"/500/500");
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+}
+
+.image_section1 {
+    border-radius: 40px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.image_section3 {
+    margin-bottom: 3px;
+    border-radius: 40px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}

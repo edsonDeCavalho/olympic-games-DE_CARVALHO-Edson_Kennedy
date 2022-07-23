@@ -1,0 +1,14 @@
+$color-socials:( Mygrey:#A3B4C8, MyorangeCLaire:#CC6D3D, Myorange:#B74803, Myblue:#022E51, whitie:white);
+@each $key,
+$value in $color-socials {
+    .color-#{$key} {
+        color: $value;
+    }
+    .background-section-#{$key} {
+        background-color: $value;
+    }
+    .background-text-#{$key} {
+        color: $value;
+        font-weight: 600;
+    }
+}
