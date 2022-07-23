@@ -5,7 +5,7 @@ SCSS
 Project effecue dans le cadre d'un ratrappage d'un cours de CSS dans le quelle en utilise du scss.
 
 
-***Lien video Loom : 
+***Lien video Loom :  https://www.loom.com/share/3c9eb9cb7ae943a7925cf66c55a987f1
 
 ## Preview
 
