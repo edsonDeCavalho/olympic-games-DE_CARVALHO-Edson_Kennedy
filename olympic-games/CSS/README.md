@@ -2,7 +2,7 @@ SCSS
 === 
 
 
-Project effecue dans le cadre d'un ratrappage de le cours de CSS .
+Project effecue dans le cadre d'un ratrappage d'un cours de CSS dans le quelle en utilise du scss.
 
 
 ***Lien video Loom : 
