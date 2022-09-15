@@ -22,6 +22,9 @@ class Athletes
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Pays = null;
 
+    #[ORM\ManyToOne(inversedBy: 'athletes')]
+    private ?Sport $sport = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Athletes
     public function setPays(?string $Pays): self
     {
         $this->Pays = $Pays;
+
+        return $this;
+    }
+
+    public function getSport(): ?Sport
+    {
+        return $this->sport;
+    }
+
+    public function setSport(?Sport $sport): self
+    {
+        $this->sport = $sport;
 
         return $this;
     }
