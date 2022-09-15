@@ -2,29 +2,27 @@
 
 namespace App\Form;
 
-use App\Entity\Sport;
+use App\Entity\Athletes;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class SportFormType extends AbstractType
+class AthleteFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('Nom')
-            ->add('Description')
-            ->add('Lieu')
-            ->add('TypeDeSport')
-            ->add('categorie')
-            //->add('categirie')
+            ->add('Prenom')
+            ->add('Pays')
+            ->add('sport')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Sport::class,
+            'data_class' => Athletes::class,
         ]);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Categorie;
 use App\Form\CategorieType;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,6 +20,7 @@ class AddCategorieController extends AbstractController
         $categorie = new Categorie();
         $formCategorie = $this->createForm(CategorieType::class);
         $formCategorie->handleRequest($request);
+
         if($formCategorie->isSubmitted() && $formCategorie->isValid())
         {
             $categorie->setNom($formCategorie->get('Nom')->getData());
