@@ -8,13 +8,19 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/nubian/Documents/TD_Ratrage/Envoie_Projet/olympic-games-DE_CARVALHO-Edson_Kennedy/olympic-games/Symfony/src/Controller/AddAthleteController.php'|file_link(0) }}">src/Controller/AddAthleteController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/nubian/Documents/TD_Ratrage/Envoie_Projet/olympic-games-DE_CARVALHO-Edson_Kennedy/olympic-games/Symfony/templates/add_athlete/index.html.twig'|file_link(0) }}">templates/add_athlete/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="example-wrapper">
+        <h1>Hello {{ form_title }}! ✅</h1>
+        {{ form_start(form_athlete) }}
+        {{ form_row(form_athlete.Nom) }}
+        {{ form_row(form_athlete.Prenom) }}
+        {{ form_row(form_athlete.Pays) }}
+        <input
+                id="sport"
+                type="number"
+                class="form-control"
+                name="sport"
+        />
+        <button type="submit" class="btn">Register nouveau sport</button>
+        {{ form_end(form_athlete) }}
+    </div>
 {% endblock %}

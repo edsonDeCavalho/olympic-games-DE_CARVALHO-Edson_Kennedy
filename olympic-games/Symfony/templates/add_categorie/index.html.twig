@@ -16,4 +16,10 @@
     <button type="submit" class="btn">Register nouvelle categorie</button>
     {{ form_end(form_categorie) }}
 </div>
+<div class="example-wrapper">
+
+    {% for entity in list_of_categories %}
+        <li>{{ entity }}</li>
+    {% endfor %}
+</div>
 {% endblock %}

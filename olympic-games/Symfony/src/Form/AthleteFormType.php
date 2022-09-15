@@ -15,7 +15,7 @@ class AthleteFormType extends AbstractType
             ->add('Nom')
             ->add('Prenom')
             ->add('Pays')
-            ->add('sport')
+
         ;
     }
 
