@@ -51,7 +51,7 @@ There's no need to configure anything to run the application. If you have
 browser at the given URL (<https://localhost:8000> by default):
 
 ```bash
-$ cd symfony-bundle-skeleton/
+$ cd Symfony/
 $ symfony serve
 ```
 
