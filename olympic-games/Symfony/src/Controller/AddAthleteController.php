@@ -22,6 +22,13 @@ class AddAthleteController extends AbstractController
         $formAthlestes = $this->createForm(AthleteFormType::class);
         $formAthlestes->handleRequest($request);
 
+        /*Liste de Athlestes*/
+        $listOfAthletes=$entityManager->getRepository(Athletes::class)->findAll();
+
+        foreach ($listOfAthletes as $at) {
+            $listOfAthletesToSend[] = $at->getNom();
+        }
+
         if($formAthlestes->isSubmitted() && $formAthlestes->isValid())
         {
             $athlete->setNom($formAthlestes->get('Nom')->getData());
@@ -46,6 +53,7 @@ class AddAthleteController extends AbstractController
 
         return $this->render('add_athlete/index.html.twig', [
             'form_title' => 'Ajout de un Athlete',
+            'list_of_athletes' => $listOfAthletesToSend,
             'form_athlete'=>$formAthlestes->createView(),
         ]);
     }

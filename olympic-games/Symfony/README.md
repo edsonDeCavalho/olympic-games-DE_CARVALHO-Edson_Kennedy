@@ -8,21 +8,23 @@ Forked from [symfony/demo][1]
 Requirements
 ------------
 
-* PHP 8.1.1 or higher;
-* PDO-SQLite PHP extension enabled;
+* PHP 8.1.1 or higher
+* Symfony 6.0
+* PDO-SQLite PHP extension enabled
 * and the [usual Symfony application requirements][2].
 
 Installation
 ------------
 
 ```bash
-$ git clone https://github.com/msalsas/symfony-bundle-skeleton.git
+$ git clone https://github.com/edsonDeCavalho/olympic-games-DE_CARVALHO-Edson_Kennedy.git
 ```
 
 Install Composer dependencies:
 
 ```bash
 $ composer install
+$ npm install
 ```
 
 Usage
@@ -55,12 +57,6 @@ Tests
 Execute this command to run tests:
 
 ```bash
-$ cd symfony-bundle-skeleton/
+$ cd Symfony/
 $ ./bin/phpunit
 ```
-
-[1]: https://github.com/symfony/demo
-[2]: https://symfony.com/doc/current/reference/requirements.html
-[3]: https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
-[4]: https://symfony.com/download
-[5]: https://github.com/symfony/webpack-encore

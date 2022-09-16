@@ -5,3 +5,7 @@ controllers:
 dashboard:
     path:      /dashboard
     defaults: { _controller: DashboardController:Default:dashboard }
+
+login:
+    path: /login
+    defaults: { _controller: SecurityController:Default:login }
