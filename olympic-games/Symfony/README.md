@@ -1,9 +1,17 @@
-Symfony Rattrapage 
+Symfony Ratrapage 
 ========================
 
 
-The "Symfony Bundle Skeleton" is an application for creating reusable Symfony bundles.
-Forked from [symfony/demo][1]
+Nom : DE CARVALHO PEDRO
+Prenom : Edson Kennedy 
+A3 ALT1
+
+
+Video 
+------------
+Sur youtube : https://www.youtube.com/watch?v=iVy9ek7z4oA
+
+Sur Google Drive : https://drive.google.com/file/d/1CKXmrAEeflfXCcQnm6hVgz6eGA4Gnz0F/view
 
 Requirements
 ------------

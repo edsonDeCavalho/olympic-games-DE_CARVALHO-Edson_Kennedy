@@ -51,7 +51,6 @@ class CategoriedetailsController extends AbstractController
             'image' => $image,
             'nomCategorie' => $name,
             'nbDeSports' => $nbDeSports-1,
-
         ]);
     }
 }
