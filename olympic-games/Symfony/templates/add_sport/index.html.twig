@@ -45,8 +45,12 @@
 </div>
     <div class="example-wrapper">
         <h2>Lite des Sports:</h2>
-        {% for entity in list_of_sport %}
-            <li><a href="/sportdetails?p={{ entity }}">{{  entity }}</a></li>
+        {% set max = nBSports %}
+        <ul>
+            {% for i in 0..max %}
+                <a href="/sportdetails?p={{ list_of_sport[1][i] }}" class="hover:underline"
+                >{{ list_of_sport[0][i] }}</a
+                >
         {% endfor %}
     </div>
 {% endblock %}

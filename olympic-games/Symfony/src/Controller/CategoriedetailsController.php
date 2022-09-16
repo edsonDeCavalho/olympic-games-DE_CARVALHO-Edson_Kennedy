@@ -14,9 +14,6 @@ class CategoriedetailsController extends AbstractController
     #[Route('/categoriedetails', name: 'app_categoriedetails')]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
-
-
-
         if (isset($_GET['p'])) {
             $id=$_GET['p'];
             switch($id){
@@ -34,6 +31,7 @@ class CategoriedetailsController extends AbstractController
                     break;
             }
             $categorie=$entityManager->getRepository(Categorie::class)->find($id);
+            $name=$categorie->getNom();
             $sports=$categorie->getSports();
 
 
@@ -46,13 +44,12 @@ class CategoriedetailsController extends AbstractController
             echo "error paramettre pas trouvée";
         }
 
-        
 
         return $this->render('categoriedetails/index.html.twig', [
             'controller_name' => 'CategoriedetailsController',
             'listOfSportsToSend' => $listOfSportsToSend,
             'image' => $image,
-            'nomCategorie' => $id,
+            'nomCategorie' => $name,
             'nbDeSports' => $nbDeSports-1,
 
         ]);

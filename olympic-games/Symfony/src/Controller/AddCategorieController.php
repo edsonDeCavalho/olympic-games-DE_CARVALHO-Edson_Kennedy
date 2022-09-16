@@ -32,7 +32,6 @@ class AddCategorieController extends AbstractController
         for ($i=0;$i<count($listOfCategories);$i++) {
             $listOfCategoriestoSend[0][$i] = $listOfCategories[$i]->getNom();
             $listOfCategoriestoSend[1][$i] = $listOfCategories[$i]->getId();
-            echo $i;
         }
         if($formCategorie->isSubmitted() && $formCategorie->isValid())
         {

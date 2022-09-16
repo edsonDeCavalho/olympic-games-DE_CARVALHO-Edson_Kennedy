@@ -24,10 +24,11 @@ class AddSportController extends AbstractController
         /*Liste de Sports*/
         $listOfSports=$entityManager->getRepository(Sport::class)->findAll();
 
-        foreach ($listOfSports as $spo) {
-            $listOfSportToSend[] = $spo->getNom();
+        for ($i=0;$i<count($listOfSports);$i++) {
+            $listOfSportToSend[0][$i] = $listOfSports[$i]->getNom();
+            $listOfSportToSend[1][$i] = $listOfSports[$i]->getId();
         }
-
+        $nBSports=count($listOfSports);
         if($formSport->isSubmitted() && $formSport->isValid())
         {
             $sport->setNom($formSport->get('Nom')->getData());
@@ -35,6 +36,10 @@ class AddSportController extends AbstractController
             $sport->setLieu($formSport->get('Lieu')->getData());
             $sport->setTypeDeSport($formSport->get('TypeDeSport')->getData());
             $sport->setCategorie($formSport->get('categorie')->getData());
+
+            $listOfCategories=$entityManager->getRepository(Categorie::class)->findAll();
+            $nbCategories=count($listOfCategories);
+
 
             //echo $formSport->get('categirie')->getData();
             if (isset($_POST['categirie'])) {
@@ -55,6 +60,7 @@ class AddSportController extends AbstractController
         return $this->render('add_sport/index.html.twig', [
             'form_title' => 'Ajout de Sport',
             'list_of_sport' => $listOfSportToSend,
+            'nBSports' => $nBSports-1,
             'form_sport'=>$formSport->createView(),
         ]);
     }
