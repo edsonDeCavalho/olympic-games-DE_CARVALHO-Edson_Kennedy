@@ -9,3 +9,11 @@ dashboard:
 login:
     path: /login
     defaults: { _controller: SecurityController:Default:login }
+
+categoriedetails:
+    path: /categoriedetails
+    defaults: { _controller: CategoriedetailsController:Default:categoriedetails }
+
+sportdetails:
+    path: /sportdetails
+    defaults: { _controller: SportdetailsController:Default:sportdetails }

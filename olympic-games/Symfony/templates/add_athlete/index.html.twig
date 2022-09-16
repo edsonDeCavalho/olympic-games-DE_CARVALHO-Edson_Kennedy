@@ -65,10 +65,8 @@
 
     <div class="max-w-lg mx-auto">
         <h2>Lite des Athletes:</h2>
-        {% for entity in list_of_athletes %}
-        <a href="#" aria-current="true" class="block px-4 py-2 border-b border-gray-200 w-full rounded-t-lg bg-blue-700 text-white cursor-pointer">
-            {{ entity }}
-        </a>
+        {% for entity in list_of_categories %}
+            <li>{{  entity }}</li>
         {% endfor %}
     </div>
 {% endblock %}

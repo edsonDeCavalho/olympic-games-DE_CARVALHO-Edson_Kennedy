@@ -29,6 +29,9 @@ class AddAthleteController extends AbstractController
             $listOfAthletesToSend[] = $at->getNom();
         }
 
+        for ($i=0;$i<count($listOfAthletes);$i++) {
+            $listOfAthletesToSend[0][$i] = $at->getNom();
+        }
         if($formAthlestes->isSubmitted() && $formAthlestes->isValid())
         {
             $athlete->setNom($formAthlestes->get('Nom')->getData());

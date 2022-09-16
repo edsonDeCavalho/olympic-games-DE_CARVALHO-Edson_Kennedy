@@ -46,7 +46,7 @@
     <div class="example-wrapper">
         <h2>Lite des Sports:</h2>
         {% for entity in list_of_sport %}
-            <li><a href="index.html.twig">{ entity }}</a></li>
+            <li><a href="/sportdetails?p={{ entity }}">{{  entity }}</a></li>
         {% endfor %}
     </div>
 {% endblock %}

@@ -3,18 +3,107 @@
 {% block title %}Hello CategoriedetailsController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <section class="relative block h-500-px">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
+            background-image: url({{ image }});
+          ">
+        </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    </section>
+    <section class="relative py-16 bg-blueGray-200" style="background-color: black;">
+        <div class="container mx-auto px-4">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+                <div class="px-6">
+                    <div class="flex flex-wrap justify-center">
+                        <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/nubian/Documents/TD_Ratrage/Envoie_Projet/olympic-games-DE_CARVALHO-Edson_Kennedy/olympic-games/Symfony/src/Controller/CategoriedetailsController.php'|file_link(0) }}">src/Controller/CategoriedetailsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/nubian/Documents/TD_Ratrage/Envoie_Projet/olympic-games-DE_CARVALHO-Edson_Kennedy/olympic-games/Symfony/templates/categoriedetails/index.html.twig'|file_link(0) }}">templates/categoriedetails/index.html.twig</a></code></li>
-    </ul>
-</div>
+                        </div>
+                        <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+                            <div class="py-6 px-3 mt-32 sm:mt-0">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="text-center mt-12">
+                        <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+Categorie de sport de {{ nomCategorie }}
+                        </h3>
+
+                    </div><br><br>
+
+
+                    {% set max = nbDeSports %}
+                    <ul>
+                        {% for i in 0..max %}
+                    <div class="bg-black px-4 m-5 py-5 sm:px-6" @click="goTo('updateCourse')">
+                        <div class="flex space-x-3">
+                            <div class="min-w-0 flex-1">
+                                <p class="text-sm font-medium text-white text-left">
+                                    <a href="/sportdetails?p={{ listOfSportsToSend[1][i] }}" class="hover:underline"
+                                    >{{ listOfSportsToSend[0][i] }}</a
+                                    >
+                                </p>
+                                <p class="text-sm text-gray-500 text-left">
+                                    <a href="#" class="hover:underline">Dedo</a>
+                                </p>
+                            </div>
+                            <div class="flex-shrink-0 self-center flex">
+                                <div class="relative z-30 inline-block text-left">
+                                    <div>
+                                        <button
+                                                type="button"
+                                                class="-m-2 p-2 rounded-full flex items-center text-gray-400 hover:text-gray-600"
+                                                id="menu-0-button"
+                                                aria-expanded="false"
+                                                aria-haspopup="true"
+                                        >
+                                            <span class="sr-only">Open options</span>
+                                            <!-- Heroicon name: solid/dots-vertical -->
+                                            <svg
+                                                    class="h-5 w-5"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                    aria-hidden="true"
+                                            >
+                                                <path
+                                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+                        <div class="flex flex-wrap justify-center">
+                            <div class="w-full lg:w-9/12 px-4">
+                                <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
+                                    An artist of considerable range, Jenna the name taken by
+                                    Melbourne-raised, Brooklyn-based Nick Murphy writes,
+                                    performs and records all of his own music, giving it a
+                                    warm, intimate feel with a solid groove structure. An
+                                    artist of considerable range.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="relative bg-blueGray-200 pt-8 pb-6 mt-8" style="background-color: black;">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center md:justify-between justify-center">
+                    <div class="w-full md:w-6/12 px-4 mx-auto text-center">
+                        <div class="getAllCoursestext-sm text-blueGray-500 font-semibold py-1">
+                            Made with <a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank">Notus JS</a> by <a href="https://www.creative-tim.com" class="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
 {% endblock %}

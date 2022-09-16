@@ -23,11 +23,17 @@ class AddCategorieController extends AbstractController
 
         /*Liste de Categories*/
         $listOfCategories=$entityManager->getRepository(Categorie::class)->findAll();
+        $nbCategories=count($listOfCategories);
 
         foreach ($listOfCategories as $cat) {
-            $listOfCategoriestoSend[] = $cat->getNom();
+            //$listOfCategoriestoSend[] = $cat->getId();
+            $listOfCategoriesNamestoSend[] = $cat->getNom();
         }
-
+        for ($i=0;$i<count($listOfCategories);$i++) {
+            $listOfCategoriestoSend[0][$i] = $listOfCategories[$i]->getNom();
+            $listOfCategoriestoSend[1][$i] = $listOfCategories[$i]->getId();
+            echo $i;
+        }
         if($formCategorie->isSubmitted() && $formCategorie->isValid())
         {
             $categorie->setNom($formCategorie->get('Nom')->getData());
@@ -37,7 +43,9 @@ class AddCategorieController extends AbstractController
         }
         return $this->render('add_categorie/index.html.twig', [
             'form_title' => 'Ajout de catégorie',
+            'nbCategories' => $nbCategories-1,
             'list_of_categories' => $listOfCategoriestoSend,
+            'list_of_categoriesNames' => $listOfCategoriesNamestoSend,
             'form_categorie'=>$formCategorie->createView(),
         ]);
     }

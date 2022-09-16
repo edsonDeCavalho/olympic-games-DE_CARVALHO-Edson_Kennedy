@@ -35,6 +35,17 @@
     <button type="submit" class="btn">Register nouvelle categorie</button>
     {{ form_end(form_categorie) }}
 </div>
+    <div class="max-w-lg mx-auto">
+        <h2>Lite des categories:</h2>
+        {% set max = nbCategories %}
+        <ul>
+            {% for i in 0..max %}
+                <li><a href="/categoriedetails?p={{ list_of_categories[1][i] }}">{{ list_of_categories[0][i] }}</a></li>
+            {% endfor %}
+
+        </ul>
+
+    </div>
 
 
 {% endblock %}
